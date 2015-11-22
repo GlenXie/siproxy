@@ -1,2 +1,2 @@
 # siproxy
-This a chrome extension for proxy
+This is a chrome extension for proxy
