@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+ <id>com.siproxy.ext</id>
+ <name>简易代理</name>
+ <show_icon>true</show_icon>
+ <description>小巧的代理设置,支持socks5代理方式</description>
+ <version>1.0</version>
+ <request_api_version>1</request_api_version>
+ <author>glen.x</author>
+ <background page="bg.html" />
+ <popup page="setting.html" width="446" height="578" />
+ <permissions>
+   <permission>proxy</permission>
+   <permission>http://*/*</permission>
+   <permission>https://*/*</permission>
+ </permissions>
+</extension>

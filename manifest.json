@@ -1,0 +1,20 @@
+{
+  "name": "SIProxy",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "author": "glen.x",
+  "description": "小巧的代理设置,支持socks5代理方式",
+  "browser_action": {
+    "default_icon": "icon32.png",
+    "default_popup": "setting.html"
+  },
+  "icons": {
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {"page": "bg.html"},
+  "permissions": ["proxy","http://*/*","https://*/*"],
+  "content_security_policy": "script-src 'self' https://tajs.qq.com https://pingtcss.qq.com; object-src 'self'"
+}
+ 

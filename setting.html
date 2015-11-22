@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<script type="text/javascript" src="./setting.js"></script>
+<link rel="stylesheet" type="text/css" href="./setting.css">
+</head>
+<body>
+  <div>
+    <a href='http://blog.wepk.cc' target="_blank">by glen.x</a>
+    <h1>SIProxy</h1>
+  </div>
+  <form>
+    <fieldset>
+      <input type="radio" name="mode" value="system">
+      <label for="mode">使用系统(IE)的代理设置</label>
+    </fieldset>
+    <fieldset>
+      <input type="radio" name="mode" value="direct">
+      <label for="mode">不使用代理</label>
+    </fieldset>
+    <fieldset> 
+      <input type="radio" name="mode" value="http">
+      <span>HTTP</span>
+      <input type="text" name="h_http" class="host">
+      <label>端口</label>
+      <input type="text" name="p_http" class="port">
+    </fieldset>
+    <fieldset> 
+      <input type="radio" name="mode" value="https">
+      <span>SSL</span>
+      <input type="text" name="h_https" class="host">
+      <label>端口</label>
+      <input type="text" name="p_https" class="port">
+    </fieldset>
+    <fieldset> 
+      <input type="radio" name="mode" value="socks4">
+      <span>SOCKS4</span>
+      <input type="text" name="h_socks4" class="host">
+      <label>端口</label>
+      <input type="text" name="p_socks4" class="port">
+    </fieldset>
+    <fieldset>   
+      <input type="radio" name="mode" value="socks5">
+      <span>SOCKS5</span>
+      <input type="text" name="h_socks5" class="host">
+      <label>端口</label>
+      <input type="text" name="p_socks5" class="port">
+    </fieldset>
+    <fieldset>
+      <label>不使用代理的地址(例:*.baidu.com,192.168.1.1/24):</label>
+      <textarea id="bypass"></textarea>
+    </fieldset>
+    <fieldset>
+      <input type="radio" name="mode" value="url">
+      <label>PAC脚本(地址):</label>
+      <input id="url" placeholder="请输入PAC脚本地址">
+    </fieldset>
+    <fieldset>
+      <input type="radio" name="mode" value="data">
+      <label>PAC脚本(内容):</label>
+      <textarea id="data" placeholder="请输入PAC脚本内容"></textarea>
+    </fieldset>
+    <fieldset>   
+      <input type="radio" name="mode" value="free">
+      <label id="free">使用网络资源(搜集自互联网,请谨慎使用)</label>
+    </fieldset>
+    <input type="checkbox" id="local">
+    <label for="local">本地网络不使用代理</label>
+    <input type="submit" value="保存设置">
+    <label id="msg"></label>
+  </form>
+</body>
+</html>
