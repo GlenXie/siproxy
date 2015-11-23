@@ -1,6 +1,6 @@
 // Copyright 2015 Glen Xie. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
+// Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
+// https://github.com/GlenXie/siproxy
 var SIProxy=SIProxy||{}; var config={},map=[];
 var loc_addr,host,port,hosts,ports;
 var local,data,url,bypass,msg;
@@ -25,10 +25,10 @@ SIProxy.getFree=function(){
 }
 if(!localStorage.sifree)SIProxy.getFree();
 SIProxy.checkhost=function(input){
-  var ip=input.value.trim();
-  if(/^((25[0-5]|2[0-4]\d|[0-1]?\d{1,2})\.){3}(25[0-5]|2[0-4]\d|[0-1]?\d{1,2})$/.test(ip)
-   ||(ip.match(/:/g)&&ip.match(/:/g).length<=7&&/::/.test(ip)?/^([\da-f]{1,4}(:|::)){1,6}[\da-f]{1,4}$/i.test(ip):/^([\da-f]{1,4}:){7}[\da-f]{1,4}$/i.test(ip)))
-  {input.style.borderColor=""; host=ip;}
+  var h=input.value.trim();
+  if(/^((25[0-5]|2[0-4]\d|[0-1]?\d{1,2})\.){3}(25[0-5]|2[0-4]\d|[0-1]?\d{1,2})$/.test(h)||/^([^.]+\.)+[^.^0-9]+$/.test(h)
+   ||(h.match(/:/g)&&h.match(/:/g).length<=7&&/::/.test(h)?/^([\da-f]{1,4}(:|::)){1,6}[\da-f]{1,4}$/i.test(h):/^([\da-f]{1,4}:){7}[\da-f]{1,4}$/i.test(h)))
+  {input.style.borderColor=""; host=h;}
   else {input.style.borderColor="red"; host=undefined;}
 }
 SIProxy.checkport=function(input){
